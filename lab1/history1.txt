@@ -1,0 +1,185 @@
+    1  whoami
+    2  ls
+    3  cd ..
+    4  ls
+    5  cd liveuser
+    6  whoami
+    7  sudo whoami
+    8  whoami
+    9  man su
+   10  man whoami
+   11  whoami
+   12  whoiam
+   13  whoami
+   14  echo "Hello World"
+   15  date
+   16  cal
+   17  man cal
+   18  cal -3
+   19  history
+   20  clear
+   21  histore
+   22  history
+   23  pwd
+   24  cd /
+   25  cd ..
+   26  pwd
+   27  ls
+   28  ls /var
+   29  cd ~
+   30  cd
+   31  pwd
+   32  cd ..
+   33  pwd
+   34  ls
+   35  ls -l
+   36  man ls
+   37  cd ls
+   38  cd ~
+   39  ls
+   40  pwd
+   41  mkdir fruits
+   42  ls
+   43  cd /
+   44  mkdir ~/animals
+   45  ls
+   46  cd ~
+   47  ls
+   48  touch /tmp/temp
+   49  cd fruits
+   50  ls
+   51  touch apple banana lion pineaple
+   52  ls
+   53  touch ~/animals cat.txt dog.txt elephant.txt
+   54  cd ..
+   55  ls
+   56  cd animals
+   57  ls
+   58  cd ..
+   59  cd fruits
+   60  touch ~/animals/cat.txt
+   61  touch ~/animals/dog.txt
+   62  touch ~/animals/elephant.txt
+   63  cd ..
+   64  cd animals
+   65  ls
+   66  cd ~/fruits
+   67  date apple
+   68  stat apple
+   69  ls b*
+   70  ls *a
+   71  ls [bi]*
+   72  ls b* i*
+   73  cp /etc/passwd
+   74  cp /etc/passwd ~
+   75  cat /etc/issue
+   76  cp /etc/issue apple
+   77  cd apple
+   78  cat apple
+   79  mv lion ~/animals
+   80  cd /
+   81  ls
+   82  cd ~/animals
+   83  ls
+   84  cd ~/fruits
+   85  rnm pineaple pineapple
+   86  rm pineaple pineapple
+   87  rm pineapple pineaple
+   88  man rm
+   89  rename pineaple pineapple
+   90  rename --help
+   91  man rename
+   92  man mv
+   93  rename pineaple pineapple fruits
+   94  rename pineaple pineapple ~/fruits
+   95  ls
+   96  cd /
+   97  cd ~/animals
+   98  ls
+   99  cd ~
+  100  ls
+  101  cd fruits
+  102  ls
+  103  touch pineapple
+  104  ls
+  105  > cat.txt
+  106  ls
+  107  man wc
+  108  history
+  109  wc -1 /etc/passwd
+  110  wc -l /etc/passwd
+  111  cd ~
+  112  ln -s /etc/passwd passwd_link
+  113  ln .bash_history history_hard
+  114  ls -l ~/.bash_history
+  115  cd fruits
+  116  ls
+  117  rm cat.txt
+  118  rm dog.txt
+  119  rm elephant.txt
+  120  ls
+  121  rename pineaple pineapple ~/fruits
+  122  ls
+  123  rename pineapple pineappl1e ~/fruits
+  124  ls
+  125  rm apple
+  126  cd 
+  127  rm fruits/apple
+  128  rm ~/fruits/apple
+  129  mkdir rmme
+  130  ls
+  131  rmdir rmme
+  132  rmdir fruits
+  133  rm -fr fruits
+  134  ls
+  135  cat /etc/passwd /var/log/boot.log
+  136  cp /etc/init.d/ ~
+  137  cp -r /etc/init.d/ ~
+  138  rm -fr init.d
+  139  cut -d: -f1 /etc/passwd
+  140  man cut
+  141  cut -d: -f1 /etc/passwd | less
+  142  cut -d: -f1 /etc/passwd | column -ts: | less
+  143  cut -d: -f1,3,4 /etc/passwd | column -ts: | less
+  144  grep :/bin/bash /etc/passwd | wc -l
+  145  man grep
+  146  rpm -qa --qf '%{NAME}; %{SIZE}\n' | sort -rn -k2,2 | head -n25
+  147  rpm -ql man-db | xargs -1 du 2> /dev/null | sort -n
+  148  top -b -n1 | sort -i
+  149  top -b -n1 | sort -i -k12
+  150  top -b -n1 | tail -n+8 | cut -c7- | tr -s ' ' '\t' | cut -f11,5
+  151  cut -d: -f1,7 /etc/passwd | tr ":" " " | sort -1
+  152  cut -d: -f1,7 /etc/passwd | tr ":" " " | sort -l
+  153  cut -d: -f1,7 /etc/passwd | tr ":" " " | sort -k1
+  154  sort -k1 /etc/passwd | tr ":" " " | column -t | less
+  155  git --version
+  156  cd /usr/share/doc/git-*
+  157  cat user-manual.txt | tr ' ' '\012' 
+  158  cat user-manual.txt | tr ' ' '\012' | tr '[:upper;]' '[:lower:] 
+  159  cat user-manual.txt | tr ' ' '\012' | tr '[:upper;]' '[:lower:] | tr -d '[:punct:]' 
+  160  cat user-manual.txt | tr ' ' '\012' | tr '[:upper;]' '[:lower:] | tr -d '[:punct:]' | grep -v '[a-z]' 
+  161  cat user-manual.txt | tr ' ' '\012' | tr '[:upper;]' '[:lower:] | tr -d '[:punct:]' | grep -v '[a-z]' | sort | uniq -c
+  162  cat user-manual.txt | tr ' ' '\012' | tr '[:upper;]' '[:lower:] | tr -d '[:punct:]' | grep -v '[a-z]' | sort | uniq -c | sorn -rn 
+  163  cat user-manual.txt | tr ' ' '\012' | tr '[:upper;]' '[:lower:] | tr -d '[:punct:]' | grep -v '[a-z]' | sort | uniq -c | sort -rn | head -5
+  164  cat user-manual.txt | tr -cs '[:alpha:]' '\n' 
+  165  cat user-manual.txt | tr -cs '[:alpha:]' '\n' | tr '[:upper;]' '[:lower:] 
+  166  cat user-manual.txt | tr -cs '[:alpha:]' '\n' | tr '[:upper;]' '[:lower:] | sort | uniq -c 
+  167  cat user-manual.txt | tr -cs '[:alpha:]' '\n' | tr '[:upper;]' '[:lower:] | sort | uniq -c | sort -rn | head -5
+  168  tr '[:lower:]' '[:upper:]' <  user-manual.txt | tr -d '[:punct:] \n\t' | fold -w1 | sort | uniq -c | sort -rn | head -5
+  169  tr '[:alph:]' '\n'  <  user-manual.txt | less | grep -E ........ | sort | uniq -c | sort -rn | head -5
+  170  ping ya.ru
+  171  curl wttr.in
+  172  hostname -I
+  173  curl ifconfig.me
+  174  wget https://raw.githubusercontent.com/jlevy/the-art-of-command-line/master/README-ru.md 
+  175  less README-ru.md
+  176  sudo id
+  177  id
+  178  whoami
+  179  sudo less /var/log/messages
+  180  less /var/log/messages
+  181  su
+  182  history
+  183  cd Documents
+  184  history > history1.txt
+  185  history > history.txt
