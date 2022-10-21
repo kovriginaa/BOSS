@@ -1,1 +1,70 @@
+.:
+total 40
+
+drw-rwxr-x. 2 liveuser liveuser 4096 Oct 21 16:27 dir
+-rw-------. 1 liveuser liveuser    0 Oct 21 16:41 file1
+-rw-rw-rw-. 1 liveuser liveuser    0 Oct 21 16:42 file2
+drwxrwxr-x. 2 liveuser liveuser 4096 Oct 21 16:19 test
+
+
+
+ls: cannot access './dir/new_file': Permission denied
+total 0
+-????????? ? ? ? ?            ? new_file
+
+
+./test:
+total 4
+---x------. 1 root liveuser 5 Oct 21 16:24 file
+
+
+
+    1  cd
+    2  mkdir test
+    3  cd test
+    4  touch file
+    5  ls
+    6  chmod 000 file
+    7  ls file
+    8  cat file
+    9  echo "test" > file
+   10  chmod 200 file
+   11  ll file
+   12  echo "test" > file
+   13  cat file
+   14  chmod 240 file
+   15  ll file
+   16  cat file
+   17  chmod 640 file
+   18  ls -l file
+   19  cat file
+   20  cd
+   21  mkdir dir
+   22  cd dir
+   23  touch new_file
+   24  ls
+   25  echo "file 2" > new_file
+   26  cat new_file
+   27  chmod u-x dir
+   28  cd
+   29  chmod u-x dir
+   30  cd dir
+   31  cat /dir/new_file
+   32  cat dir/new_file
+   33  rm dir/new_file
+   34  chown root test/file
+   35  chgrp root test/file
+   36  cd dir
+   37  umask 0077
+   38  touch file1
+   39  ll file1
+   40  umask 0000
+   41  touch file2
+   42  ll file2
+   43  cat test/file
+   44  ls -lR
+   45  history > history2.txt
+   46  ls
+   47  cd Documents
+   48  history > history2.txt
 
