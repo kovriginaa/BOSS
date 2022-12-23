@@ -1,5 +1,5 @@
     1  whoami
-    2	 whoaim
+    2  whoaim
     3  echo "Hello world"
     4  date
     5  cal
