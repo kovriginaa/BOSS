@@ -1,4 +1,4 @@
-       1  whoami
+    1  whoami
     2	 whoaim
     3  echo "Hello world"
     4  date
