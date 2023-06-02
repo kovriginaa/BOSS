@@ -1,1 +1,1 @@
-# BOSS B20-505 Kovrigina Sofya
+# OSS B20-505 Kovrigina Sofya
